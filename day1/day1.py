@@ -1,8 +1,6 @@
-
-
 calories = []
 cal = 0
-with open("input2.txt", "r") as fin:
+with open("input.txt", "r") as fin:
     for line in fin:
         line = line.strip("\n")
         if (line == ""):
@@ -12,6 +10,5 @@ with open("input2.txt", "r") as fin:
             cal += float(line)
 
 calories.sort(reverse=True)
-print(f"max calories = {calories[0]}")
-print(f"Top 3: {calories[0]} {calories[1]} {calories[2]}")
-print(calories[0]+calories[1]+calories[2])
+print(f"Top 3 elves: {calories[0]:.0f} {calories[1]:.0f} {calories[2]:.0f}")
+print(f"with sum = {calories[0]+calories[1]+calories[2]:.0f}")
